@@ -1,0 +1,20 @@
+version: '2'
+
+services: 
+    app:
+        build: .
+        environment:
+            - PORT=80
+        networks: 
+            - backbone
+    
+    proxy:
+        image: therickys93/proxy
+        ports: 
+            - "80:80"
+        networks: 
+            - backbone
+    
+networks: 
+    backbone:
+        driver: bridge
