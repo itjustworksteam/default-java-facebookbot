@@ -6,4 +6,4 @@ jdk: oraclejdk8
 script:
    - ./gradlew clean check jacocoTestReport
 after_success:
-  - docker build -t therickys93/java-server .
+  - docker build -t therickys93/default-java-facebookbot .
