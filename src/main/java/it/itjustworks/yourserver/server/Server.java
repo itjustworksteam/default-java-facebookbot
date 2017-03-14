@@ -10,7 +10,7 @@ public class Server {
 	public Server(){
 		component = new Component();
 		component.getServers().add(Protocol.HTTP, Configs.port());
-		component.getDefaultHost().attachDefault(new ServerApplication());
+		component.getDefaultHost().attachDefault(new FacebookBotApplication());
 		component.setLogService(new LogService(false));
 		component.getLogger().info("Server starded at http://localhost:" + Configs.port());
 	}
