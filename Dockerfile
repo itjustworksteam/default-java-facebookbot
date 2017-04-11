@@ -1,4 +1,4 @@
-FROM therickys93/ubuntu14java
+FROM therickys93/alpinejava
 ADD . /facebookbot
 WORKDIR /facebookbot
 RUN ./gradlew clean stage
